@@ -3,8 +3,8 @@ from __future__ import unicode_literals
 from distutils.core import setup
 
 setup(
-    name='wagtail-leaflet',
-    packages=['wagtail-leaflet', ],
+    name='wagtailleaflet',
+    packages=['wagtailleaflet', ],
     version='0.1',
     description='An application providing some template tags to add buttons to pages',
     author='François GUÉRIN',
