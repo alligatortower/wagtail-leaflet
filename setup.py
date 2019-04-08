@@ -13,7 +13,7 @@ setup(
     download_url='https://github.com/frague59/django-buttons/tarball/0.1',
     keywords=['django', 'wagtail', 'leaflet'],
     classifiers=[],
-    requires=['django-appconf',
+    install_requires=['django-appconf',
               'wagtail>=1.9',
               'django-leaflet',
               'django-geojson', ]
