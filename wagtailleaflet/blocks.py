@@ -15,7 +15,7 @@ import logging
 from django import forms
 from django.template.loader import render_to_string
 from django.utils.translation import ugettext_lazy as _
-from wagtail.wagtailcore.blocks import FieldBlock
+from wagtail.core.blocks import FieldBlock
 
 from wagtailleaflet.forms import BlockGeoJSONFormField
 
@@ -41,10 +41,10 @@ class GeoJSONBlock(FieldBlock):
         """
         Renders ``edit`` form
 
-        :param value: current value 
-        :param prefix: prefix of the form item 
+        :param value: current value
+        :param prefix: prefix of the form item
         :param errors: Validations errors
-        :returns: HTML Fragment  
+        :returns: HTML Fragment
         """
         logger.debug('MapBlock::render_form() value = %s', value)
         rendered = super(GeoJSONBlock, self).render_form(value=value, prefix=prefix, errors=errors)
@@ -54,9 +54,9 @@ class GeoJSONBlock(FieldBlock):
         """
         Renders the widget in the web site
 
-        :param value: current value 
-        :param context: Additional render context 
-        :returns: HTML Fragment  
+        :param value: current value
+        :param context: Additional render context
+        :returns: HTML Fragment
         """
         logger.debug('MapBlock::render() value = %s', value)
         local_context = context or {}
@@ -91,9 +91,8 @@ class GeoJSONBlock(FieldBlock):
 class GeoJSONPointBlock(GeoJSONBlock):
     """
     A Geo JSON field into a block !
-    
     .. note::
-       ``POINT`` item 
+       ``POINT`` item
     """
     geom_type = 'POINT'
 
@@ -105,8 +104,7 @@ class GeoJSONPointBlock(GeoJSONBlock):
 class GeoJSONMultiPointBlock(GeoJSONBlock):
     """
     A Geo JSON field into a block !
-    
     .. note::
-       ``MultiPoint`` item 
+       ``MultiPoint`` item
     """
     geom_type = 'MULTIPOINT'
