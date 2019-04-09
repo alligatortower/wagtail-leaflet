@@ -8,7 +8,6 @@
 :modulename: wagtailleaflet.__init__.py
 
 """
-import os
 import sys
 import argparse
 import logging
@@ -26,7 +25,7 @@ def main(arguments):
 
     args = parser.parse_args(arguments)
 
-    print args
+    print(args)
 
 
 if __name__ == '__main__':
